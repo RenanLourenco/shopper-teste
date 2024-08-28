@@ -1,0 +1,14 @@
+version: '4.0'
+
+services:
+  app:
+    build: .
+    networks:
+      - backend-network
+    container_name: app
+    ports:
+      - 3000:3000
+
+networks:
+  backend-network:
+    driver: bridge
