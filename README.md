@@ -22,9 +22,9 @@ Como rodar o projeto com docker:
 
 Como rodar o projeto sem o docker:
   - Rodar o comando: yarn install
-  - Rodar o comando para iniciar o banco de dados (PostgreSQL): yarn run start:db
-  - Rodar o comando para espelhar o schemas: yarn run push
-  - Rodar o comando para iniciar a api (DEV): yarn run dev
-  - Rodar o comando para buildar a aplicação: yarn run build
-  - Rodar o comando para iniciar a api (PROD): yarn run start
+  - Rodar o comando para iniciar o banco de dados (PostgreSQL): yarn start:db
+  - Rodar o comando para espelhar o schemas: yarn push
+  - Rodar o comando para iniciar a api (DEV): yarn dev
+  - Rodar o comando para buildar a aplicação: yarn build
+  - Rodar o comando para iniciar a api (PROD): yarn start
 
