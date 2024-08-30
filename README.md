@@ -8,6 +8,8 @@ Tecnologias utilizadas:
 - Express
 - Prisma (ORM)
 
+Features: 
+
 - Rota para upload de conta ✅
 - Rota para confirmação de valor da conta ✅
 - Rota para listagem de contas de determinado consumidor ✅
