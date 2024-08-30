@@ -1,8 +1,8 @@
 import { CustomError } from "./CustomError";
 
-export class MissingDataError extends CustomError {
+export class InvalidMeasureTypeError extends CustomError {
     constructor(message: string, code: number, errorCode: string){
         super(message, code, errorCode);
-        Object.setPrototypeOf(this, MissingDataError);
+        Object.setPrototypeOf(this, InvalidMeasureTypeError);
     }
 }

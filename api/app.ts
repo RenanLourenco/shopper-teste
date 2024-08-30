@@ -2,9 +2,7 @@ import cors from "cors";
 import 'express-async-errors'
 import express, { Router } from "express";
 import 'dotenv/config'
-// import { errorMiddleware } from "./middlewares/error";
-import YAML from "yamljs";
-import * as path from "path";
+import { errorMiddleware } from "./middlewares/error";
 
 
 
@@ -25,18 +23,11 @@ export class App {
     this.express.use(cors());
     this.express.use(express.json({limit: '60mb'}));
 
-    // const swaggerPath = path.resolve(__dirname, 'swagger.yaml');
-    // const swaggerDocument = YAML.load(swaggerPath);
-
-    // Configurando o Swagger UI
-    // this.express.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-
   }
 
   private initializeRoutes() {
     this.express.use(this.routes);
-    // this.express.use(errorMiddleware)
+    this.express.use(errorMiddleware)
   }
 
   public initializeServer() {

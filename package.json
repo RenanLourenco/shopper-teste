@@ -4,17 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node ./api/index.ts",
+    "dev": "ts-node-dev ./api/index.ts",
     "build": "tsc",
     "start": "node ./dist/",
     "start:db": "docker compose up -d --build db",
-    "migration": "prisma db push",
+    "migration": "prisma db migrate",
+    "push": "prisma db push",
     "test": "jest --runInBand",
     "coverage": "jest --runInBand --coverage"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.17.1",
-    "@prisma/client": "^5.16.1",
+    "@google/generative-ai": "0.12.0",
+    "@prisma/client": "^5.19.0",
     "@types/node": "^22.5.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
