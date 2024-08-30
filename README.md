@@ -8,9 +8,9 @@ Tecnologias utilizadas:
 - Express
 - Prisma (ORM)
 
-Rota para upload de conta ✅
-Rota para confirmação de valor da conta ✅
-Rota para listagem de contas de determinado consumidor ✅
+- Rota para upload de conta ✅
+- Rota para confirmação de valor da conta ✅
+- Rota para listagem de contas de determinado consumidor ✅
 
 
 Como rodar o projeto com docker:
