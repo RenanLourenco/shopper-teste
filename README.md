@@ -1,7 +1,9 @@
 Projeto Shopper - Leitura de Conta consumo de água/gás.
 
+*Para rodar, certifique que você tenha criado um arquivo .env com a api-key do Gemini*
 
-Projeto de uma api para enviar uma conta de consumo, usar uma LLM para identificar o valor da conta e guardar em um banco de dados.
+
+Projeto de uma api para enviar uma conta de consumo, usar uma LLM (Gemini) para identificar o valor da conta e guardar em um banco de dados.
 Tecnologias utilizadas:
 - Node v20.x
 - TypeScript
