@@ -9,12 +9,13 @@ import { FileHelper } from "./lib/fileHelper/fileHelper";
 import { PrismaClient } from "@prisma/client";
 import { MeasureRepository } from "./repositories/MeasureRepository";
 
-const geminiApiKey: string = process.env.API_KEY as string;
+const geminiApiKey: string = process.env.GEMINI_API_KEY as string;
 
 const routes = Router();
 
 
-const prismaClient = new PrismaClient()
+const prismaClient = new PrismaClient();
+
 const genAI = new GoogleGenerativeAI(geminiApiKey);
 const genAIFileManager = new GoogleAIFileManager(geminiApiKey);
 const fileHelper = new FileHelper();

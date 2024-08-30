@@ -1,14 +1,13 @@
 {
-  "name": "happ",
+  "name": "shopper",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev ./api/index.ts",
     "build": "tsc",
-    "start": "node ./dist/",
-    "start:db": "docker compose up -d --build db",
-    "migration": "prisma db migrate",
+    "start": "node ./dist/api/",
+    "start:db": "docker compose up -d --build database",
     "push": "prisma db push",
     "test": "jest --runInBand",
     "coverage": "jest --runInBand --coverage"

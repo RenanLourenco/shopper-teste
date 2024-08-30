@@ -6,7 +6,7 @@ export class FileHelper {
         //save file in temp;
         const buffer = Buffer.from(base64, 'base64');
     
-        const filePath = path.join(__dirname, `./../../../public/${imageName}.jpg`)
+        const filePath = path.join(__dirname, `./../../../api/public/${imageName}.jpg`)
 
         await fs.writeFile(filePath, buffer);
 

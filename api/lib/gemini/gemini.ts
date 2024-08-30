@@ -1,8 +1,7 @@
 import { GenerativeModel, GoogleGenerativeAI } from "@google/generative-ai"
 import { GoogleAIFileManager  } from "@google/generative-ai/files"
 import { FileHelper } from "../fileHelper/fileHelper"
-import fs from 'fs/promises';
-import path from "path";
+
 
 type Base64 = string;
 

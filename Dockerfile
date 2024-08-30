@@ -1,16 +1,17 @@
-FROM node:18
+FROM node:20
+
+RUN mkdir app
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
-
 COPY . .
 
-RUN chmod +x api-start-docker.sh
+RUN yarn install
+
+RUN yarn build
+
+COPY ./api/public ./dist/api/public
 
 EXPOSE 3000
 
-
-CMD ["./api-start-docker.sh"]
+CMD ["yarn", "start"]

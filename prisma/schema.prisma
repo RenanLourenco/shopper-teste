@@ -18,7 +18,7 @@ model Measure {
   measure_datetime DateTime
   measure_type String
   measure_value Float 
-  customer_code String @unique
+  customer_code String
   has_confirmed Boolean
   image_url String
 }

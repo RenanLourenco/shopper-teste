@@ -4,6 +4,7 @@ import express, { Router } from "express";
 import 'dotenv/config'
 import { errorMiddleware } from "./middlewares/error";
 import path from "path";
+import { timingSafeEqual } from "crypto";
 
 
 
@@ -15,13 +16,13 @@ export class App {
   constructor(port: number, routes: Router) {
     this.port = port;
     this.routes = routes;
-    this.express = express();
+    this.express = express();    
     this.initializeAppSetup();
     this.initializeRoutes();
   }
 
   private initializeAppSetup() {
-    this.express.use('/public', express.static(path.join(__dirname, 'public')))
+    this.express.use('/public',express.static(path.join(__dirname, 'public')))
     this.express.use(cors());
     this.express.use(express.json({limit: '60mb'}));
   }
