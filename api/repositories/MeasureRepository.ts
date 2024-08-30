@@ -27,7 +27,7 @@ export class MeasureRepository extends Repository<Measure> {
                 image_url: true
             }
         });
-        console.log(measures)
+     
 
         return measures
     }

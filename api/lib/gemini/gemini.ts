@@ -24,7 +24,7 @@ export class GeminiAdapter {
     async uploadFile(data: Base64, imageName: string): Promise<string> {
         
         // //save file in temp;
-        const uploadedImage = await this.fileHelper.saveImageInTemp(data, imageName);
+        const uploadedImage = await this.fileHelper.saveImageInPublic(data, imageName);
 
         //upload to gemini
 

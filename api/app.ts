@@ -3,6 +3,7 @@ import 'express-async-errors'
 import express, { Router } from "express";
 import 'dotenv/config'
 import { errorMiddleware } from "./middlewares/error";
+import path from "path";
 
 
 
@@ -20,9 +21,9 @@ export class App {
   }
 
   private initializeAppSetup() {
+    this.express.use('/public', express.static(path.join(__dirname, 'public')))
     this.express.use(cors());
     this.express.use(express.json({limit: '60mb'}));
-
   }
 
   private initializeRoutes() {

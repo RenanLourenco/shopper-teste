@@ -1,13 +1,18 @@
 version: '4.0'
 
 services:
-  # app:
-  #   build: .
-  #   networks:
-  #     - backend-network
-  #   container_name: app
-  #   ports:
-  #     - 3000:3000
+  app:
+    build: .
+    networks:
+      - backend-network
+    container_name: app
+    environment:
+      DATABASE_URL: postgresql://teste:teste123@localhost:5432/mydb?schema=public"
+      API_KEY: "${API_KEY}"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
   database:
     container_name: database
     image: postgres
